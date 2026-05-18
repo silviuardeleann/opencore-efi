@@ -30,4 +30,4 @@ Each device folder typically contains:
 
 ## 📂 Devices
 
-- Dell Latitude 7490 → [`Dell Latitude 7490/`](./Dell%20Latitude%207490/README.md)
+- Dell Latitude 7490 → [`Dell Latitude 7490/`](./Dell%20Latitude%207490)
