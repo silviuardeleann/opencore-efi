@@ -1,4 +1,8 @@
 # FILES
+oldConfig.plist
 
 # FOLDERS
-.Trashes
+.DS_Store/
+.fseventsd/
+.Spotlight-V100/
+.Trashes/
