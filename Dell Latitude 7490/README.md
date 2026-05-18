@@ -28,6 +28,7 @@ This EFI is specifically configured for the following hardware:
 - Sleep / Wake
 - Keyboard & Trackpad
 - Audio (Internal speakers and microphone)
+- Internal webcam
 - SD Card Reader
 - USB ports (including USB-C)
 
