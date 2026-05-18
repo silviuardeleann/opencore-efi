@@ -13,7 +13,7 @@ This EFI is specifically configured for the following hardware:
 - **SSD:** Samsung PM961 256GB M.2 NVMe
 - **Ethernet:** Intel I219-V
 - **Wi-Fi / Bluetooth:**  
-  - Intel Wireless AC 8265 / 8260 (Requires [OpenCore Legacy Patcher](https://github.com/dortania/Opencore-Legacy-Patcher) after install to work)
+  - Intel Wireless AC 8265 / 8260 (Requires [OpenCore Legacy Patcher](https://github.com/dortania/Opencore-Legacy-Patcher) to work, set SecureBootModel to `Disabled` in [config.plist](./EFI/OC/config.plist), patch, after set it to `j132`)
   - Other cards may work with the same patches as the Intel ones.
 - **Display:** 14" FHD (1920×1080)
 - **Trackpad:** Precision touchpad (I2C)
