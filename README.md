@@ -30,4 +30,5 @@ Each device folder typically contains:
 
 ## 📂 Devices
 
+- Dell Latitude E7470 → [`Dell Latitude E7470`](./devices/Dell%20Latitude%20E7470/)
 - Dell Latitude 7490 → [`Dell Latitude 7490/`](./devices/Dell%20Latitude%207490)
