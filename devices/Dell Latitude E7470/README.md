@@ -1,0 +1,3 @@
+# Dell Latitude E7470 - OpenCore EFI
+
+Coming soon...
