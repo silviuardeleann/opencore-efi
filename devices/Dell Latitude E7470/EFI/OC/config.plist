@@ -1083,7 +1083,7 @@
                     <key>bluetoothInternalControllerInfo</key>
                     <data>AAAAAAAAAAAAAAAAAAA=</data>
                     <key>boot-args</key>
-                    <string>-v keepsyms=1</string>
+                    <string>keepsyms=1</string>
                     <key>csr-active-config</key>
                     <data>AwoAAA==</data>
                     <key>prev-lang:kbd</key>
