@@ -82,4 +82,4 @@ If the hardware differs, the corresponding **kexts, ACPI files, or `config.plist
 
 ## 🙏 Credits
 
-[OpenCore](https://github.com/acidanthera/OpenCorePkg) · [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) · [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) · [ComboJack](https://github.com/macos86/ComboJack)
+[Dortania](https://dortania.github.io/OpenCore-Install-Guide/) · [OpenCore](https://github.com/acidanthera/OpenCorePkg) · [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) · [ComboJack](https://github.com/macos86/ComboJack)
