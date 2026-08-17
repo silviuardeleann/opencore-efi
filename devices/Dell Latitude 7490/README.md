@@ -1,50 +1,85 @@
-# Dell Latitude 7490 - OpenCore EFI
+# Dell Latitude 7490 · OpenCore EFI
 
-This folder contains a working OpenCore EFI configuration for the Dell Latitude 7490.
+A clean, ready-to-use **OpenCore EFI** for the Dell Latitude 7490, with support for the most common hardware configurations.
+
+> **Note:** This EFI is designed to be reusable across multiple Latitude 7490 units, but hardware variants may require minor changes to the EFI.
 
 ## 🧩 Hardware
 
-This EFI is specifically configured for the following hardware:
+| Component             | Supported                    |
+| --------------------- | ---------------------------- |
+| **CPU**               | Intel Core i5 / i7 · 8th Gen |
+| **Graphics**          | Intel UHD Graphics 620       |
+| **RAM**               | DDR4 · 2133 MHz              |
+| **Storage**           | M.2 NVMe                     |
+| **Ethernet**          | Intel I219-V                 |
+| **Wi-Fi / Bluetooth** | Intel 8260 / 8265            |
+| **Display**           | 14" FHD · 1920×1080          |
+| **Trackpad**          | I2C Precision Touchpad       |
+| **Audio**             | Realtek ALC256               |
 
-- **Model:** Dell Latitude 7490
-- **CPU:** Intel Core i5 / i7 8th Gen (Kaby Lake)
-- **RAM:** 16GB DDR4 @ 2133 MHz (8GB/32GB Supported)
-- **iGPU:** Intel UHD Graphics 620
-- **SSD:** Samsung PM961 256GB M.2 NVMe
-- **Ethernet:** Intel I219-V
-- **Wi-Fi / Bluetooth:**  
-  - Intel Wireless AC 8265 / 8260 (Requires [OpenCore Legacy Patcher](https://github.com/dortania/Opencore-Legacy-Patcher) to work, set SecureBootModel to `Disabled` in [config.plist](./EFI/OC/config.plist), patch, after set it to `j132`)
-  - Other cards may work with the same patches as the Intel ones.
-- **Display:** 14" FHD (1920×1080)
-- **Trackpad:** Precision touchpad (I2C)
-- **Audio:** Realtek ALC256
+## ✨ Compatibility
 
-## ⚙️ Features Status
+### 🟢 Working
 
-### ✅ Working
-- Ethernet
-- WiFi / Bluetooth
-- Battery status
-- Sleep / Wake
-- Keyboard & Trackpad
-- Audio (Internal speakers and microphone)
-- Internal webcam
-- SD Card Reader
-- USB ports (including USB-C)
+* Ethernet
+* Wi-Fi & Bluetooth*
+* Battery & power management
+* Sleep / Wake
+* Keyboard & Trackpad
+* Internal Audio & Microphone
+* Webcam
+* SD Card Reader
+* USB & USB-C
 
-### ⚠️ Partially Working
-- 3.5mm Combo Jack (Works for a short period of time and glitches but eventually comes back. Also [ComboJack](https://github.com/macos86/ComboJack) needs to be installed for partial support to work / otherwise doesn't work at all.)
+### 🟡 Partial
 
-### ❌ Not Working
-- Thunderbolt
-- Smart Card Reader
-- Fingerprint Reader
-- WWAN/GPS (Sim slot)
+* **3.5mm Combo Jack** — intermittent; requires [ComboJack](https://github.com/macos86/ComboJack)
 
-## 🧰 Notes
+### 🔴 Not Working
 
-- Make sure your BIOS settings match [OpenCore requirements](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/kaby-lake.html#intel-bios-settings) (AHCI, disabled Secure Boot unless using keys, etc.)
+* Thunderbolt
+* Smart Card Reader
+* Fingerprint Reader
+* WWAN / GPS
 
-## 📌 Credits
+## 📡 Intel Wi-Fi / Bluetooth
 
-OpenCore: https://github.com/acidanthera/OpenCorePkg
+Intel **8260 / 8265** cards require [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher).
+
+Set:
+
+```text
+SecureBootModel = Disabled
+```
+
+Apply the required patches, then change it back to:
+
+```text
+SecureBootModel = j132
+```
+
+Other compatible wireless cards may work with the same patches.
+
+## ⚙️ BIOS
+
+Follow the [Dortania OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/kaby-lake.html#intel-bios-settings) for the recommended BIOS configuration.
+
+At minimum, make sure **AHCI** is enabled and **Secure Boot** is configured appropriately.
+
+## 🔧 Hardware Variants
+
+The Latitude 7490 was shipped with different hardware configurations. Before using this EFI on another unit, check:
+
+* Wi-Fi / Bluetooth card
+* Audio codec
+* Display
+* Trackpad
+* Storage
+* CPU / iGPU
+
+If the hardware differs, the corresponding **kexts, ACPI files, or `config.plist` settings** may need to be adjusted.
+
+## 🙏 Credits
+
+[OpenCore](https://github.com/acidanthera/OpenCorePkg) · [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) · [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) · [ComboJack](https://github.com/macos86/ComboJack)
