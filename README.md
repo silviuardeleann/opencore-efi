@@ -1,34 +1,32 @@
 # OpenCore EFI
 
-This repository contains OpenCore EFI configurations for different devices.
+This repository contains **OpenCore EFI** configurations for different devices.
 
 ![macOS](https://img.shields.io/badge/macOS-Sequoia-blue)
 ![Branch](https://img.shields.io/badge/branch-sequoia-green)
 
-
 ## 📦 Structure
 
-Each device folder typically contains:
+Each device folder contains the EFI configuration and, when available, Secure Boot keys.
 
-- `EFI/` → Main OpenCore bootloader files.
-- `KEYS/` → Secure Boot keys (can be enrolled in UEFI).
+- `EFI/` → OpenCore bootloader and configuration files.
+- `KEYS/` → Secure Boot keys for optional UEFI enrollment.
 
+## 💻 Devices
 
-## ⚠️ Notes
+- **Dell Latitude E7470** → [`OpenCore EFI`](./devices/Dell%20Latitude%20E7470/)
+- **Dell Latitude 7490** → [`OpenCore EFI`](./devices/Dell%20Latitude%207490/)
 
-- These EFI folders are intended for Hackintosh setups using OpenCore.
-- Secure Boot keys in `KEYS/` are optional and only needed if you want Secure Boot enabled.
+## ⚠️ Disclaimer
 
+These EFI configurations are intended as **device-specific starting points** for Hackintosh systems using OpenCore.
 
-## 🧭 How to Use
+Hardware configurations can vary between units of the same model, so compatibility and required configuration may differ.
 
-1. Select your device folder.
-2. Copy the `EFI` folder to your EFI partition.
-3. (Optional) Enroll keys from `KEYS/` into Secure Boot key store.
-4. Boot and test.
+Refer to the README inside each device folder for hardware information and known compatibility.
 
+## 📚 Resources
 
-## 📂 Devices
-
-- Dell Latitude E7470 → [`/devices/Dell Latitude E7470/`](./devices/Dell%20Latitude%20E7470/)
-- Dell Latitude 7490 → [`/devices/Dell Latitude 7490/`](./devices/Dell%20Latitude%207490)
+- [OpenCore](https://github.com/acidanthera/OpenCorePkg)
+- [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/)
+- [Dortania OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
